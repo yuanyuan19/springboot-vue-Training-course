@@ -84,6 +84,14 @@
       </el-header>
 
       <el-main>
+        <div style="margin-buttom:30px">
+          <el-breadcrumb separator="/">
+            <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
+            <el-breadcrumb-item>活动列表</el-breadcrumb-item>
+            <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+          </el-breadcrumb>
+        </div>
         <div style="padding:10px 0">
           <el-input placeholder="请输入名称" style="width: 200px;" suffix-icon="el-icon-search"></el-input>
           <el-input placeholder="请输入邮箱" style="width: 200px;" suffix-icon="el-icon-message" class="ml-5"></el-input>
@@ -97,7 +105,7 @@
           <el-button type="primary">导入 <i class="el-icon-bottom"></i></el-button>
           <el-button type="primary">导出 <i class="el-icon-top"></i></el-button>
         </div>
-        
+
         <el-table :data="tableData" border stripe :header-cell-class-name="headerBg">
           <el-table-column prop="date" label="日期" width="140">
           </el-table-column>
@@ -124,8 +132,8 @@
 </template>
 
 <style>
-.headerBg{
-  background: #eee!important;
+.headerBg {
+  background: #eee !important;
 }
 </style>
 
@@ -147,7 +155,7 @@ export default {
       isCollapse: false,
       sideWidth: 200,
       logoTextShow: true,
-      headerBg:"headerBg"
+      headerBg: "headerBg"
     }
   },
   methods: {
